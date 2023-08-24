@@ -14,11 +14,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       // home:homePage(),
       themeMode: ThemeMode.light,
-      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      theme: ThemeData(
+      primarySwatch: Colors.deepPurple,
+   // fontFamily: GoogleFonts.latoTextTheme().fontfamily,
+      ),
       darkTheme: ThemeData(
         brightness: Brightness.light
       ),
-      initialRoute: "/home",
+      initialRoute: "/",
       routes:{
         "/":(context)=>LoginPage(),
         "/home":(context)=>homePage(),
@@ -26,4 +29,8 @@ class MyApp extends StatelessWidget {
       } ,
     );
   }
+}
+
+class GoogleFonts {
+  static latoTextTheme() {}
 }
